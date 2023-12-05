@@ -1,0 +1,33 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+  
+h2 {
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+td{
+    background-color: #4464AD;
+    color: black;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
