@@ -1,4 +1,4 @@
-# Gridiron Wager - A practice NFL betting enviornment
+# Gridiron Wager - A practice sports betting enviornment
 
 [GitHub Repository Link](https://github.com/Tjhewett/Senior-Capstone/tree/master).\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
@@ -11,24 +11,30 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
-The code contains components that swap out in and out of a single html page when choosing different Routes.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The code contains components that swap in and out of a single html page when choosing different Routes.
+
 imports: React, UseEffect, UseState, ReactDOM, Link, Route, Routes, BrowserRouter.
+
 to install imports, run npm install ...
 
 ## How to Run the Flask code 
 
-Make sure that you have Python 3.12.0 & sql3 installed.\
-Code can be found in the BackEnd Folder.\
-Open the file in VS code or another IDE and run it.\
-This must be run alongside the React App so the endpoints on the backend can be met.\
-imports: Flask, jsonify, request, requests, BeautifulSoup, SQLAlchem, CORS.\
+Make sure that you have Python 3.12.0 & sql3 installed. Code can be found in the BackEnd Folder.
+
+Open the file in VS code or another IDE and run it.
+
+This must be run alongside the React App so the endpoints on the backend can be met.
+
+imports: Flask, jsonify, request, requests, BeautifulSoup, SQLAlchem, CORS.
+
 to install imports, run pip install ...
 
 ## Prototype Progression 
 
-Users can view stats on the stat page and create an account on the sign-up page. They can also navigate between the other pages.\ 
+Users can view stats on the stat page and create an account on the sign-up page. They can also navigate between the other pages.
+
 Stats are fetched from the database in Flask and accounts are posted to the database when an account hasn't been created. 
 - User Profiles: 25%
 - Betting styles: 10%
