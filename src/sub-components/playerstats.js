@@ -15,6 +15,7 @@ const PlayerStats = () => {
   return (
     <div>
       <h2>NFL Player Stats</h2>
+      <h2>Passing Yards</h2>
       <table>
         <thead>
           <tr>

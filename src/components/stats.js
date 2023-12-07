@@ -1,6 +1,5 @@
 import React from 'react';
 import Playerstats from '../sub-components/playerstats';
-//import ScheduleComponent from '../sub-components/schedule';
 import '../styles/stats.css'
 
 function StatPage() {

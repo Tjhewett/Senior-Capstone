@@ -1,9 +1,8 @@
-// SignUp.js
-
 import React, { useState } from 'react';
 import '../styles/signup.css';
 
 const SignUp = () => {
+  const [confirmation, setConfirmation] = useState(null);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -17,10 +16,61 @@ const SignUp = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission, e.g., send data to the backend
-    console.log('Form submitted:', formData);
+
+    const isUserAlreadySignedUp = await checkUserExists();
+
+    if (isUserAlreadySignedUp) {
+      setConfirmation('User with this email or username already exists.');
+    } else {
+      try {
+        // Call the signup API
+        const response = await fetch('http://127.0.0.1:5000/api/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          console.log('User registered successfully');
+          setConfirmation('Registration successful! You can now sign in.');
+        } else {
+          console.error('Error registering user:', await response.json());
+        }
+      } catch (error) {
+        console.error('Error registering user:', error);
+      }
+    }
+  };
+
+  // Function to check if a user already exists based on email or username
+  const checkUserExists = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/check_user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          username: formData.username,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        return data.exists; // assumes there is data sent 
+      } else {
+        console.error('Error checking user:', response.statusText);
+        return false;
+      }
+    } catch (error) {
+      console.error('Error checking user:', error);
+      return false;
+    }
   };
 
   // Options for the dropdown (all 50 US states)
@@ -35,6 +85,7 @@ const SignUp = () => {
   return (
     <div>
       <h2>Sign Up</h2>
+      {confirmation && <p className='PopUp'>{confirmation}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Email:

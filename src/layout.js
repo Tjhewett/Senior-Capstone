@@ -1,3 +1,4 @@
+// Contains Browser Router to switch between components
 import React from 'react';
 import { Link, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/home';

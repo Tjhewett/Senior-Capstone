@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Gridiron Wager - A practice NFL betting enviornment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[GitHub Repository Link](https://github.com/Tjhewett/Senior-Capstone/tree/master).\
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+The Backend is in Python Flask.\
+The data is stored using SQLite.
 
-## Available Scripts
+## How to Run the React code
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
+The code contains components that swap out in and out of a single html page when choosing different Routes.\
+imports: React, UseEffect, UseState, ReactDOM, Link, Route, Routes, BrowserRouter.
+to install imports, run npm install ...\
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run the Flask code 
 
-### `npm test`
+Make sure that you have Python 3.12.0 & sql3 installed.\
+Open the file in VS code or another IDE and run it.\
+This must be run alongside the React App so the endpoints on the backend can be met.\
+imports: Flask, jsonify, request, requests, BeautifulSoup, SQLAlchem, CORS.\
+to install imports, run pip install ...\
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prototype Progression 
 
-### `npm run build`
+Users can view stats on the stat page and create an account on the sign-up page. They can also navigate between the other pages.\
+- User Profiles: 25%
+- Betting styles: 10%
+- Bet Slip: 10%
+- Bet Tracking: 0%
+- Betting mini-games: 0%
+- Stats tab: 50%
+- In-Game Money: 0% \
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Current screens:
+- Sign-in/Sign-up screen
+- Betting screen
+- Statistics screen
+- Home screen
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
