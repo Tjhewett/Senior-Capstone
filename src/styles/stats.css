@@ -1,3 +1,14 @@
 .StatPage{
-    min-height: 100vh;
+    min-height: 120vh;
+}
+.buttoncontainer{
+    text-align: center;
+}
+.stats-provider {
+    margin-bottom: 0;    
+    padding-bottom: 0;   
+}
+
+.stats-provider img {
+    height: auto;       
 }

@@ -8,7 +8,7 @@ const SignUp = () => {
     password: '',
     confirmPassword: '',
     username: '',
-    location: '', // Updated to use a dropdown for location
+    location: '', 
   });
 
   const handleChange = (e) => {
@@ -19,10 +19,16 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (formData.password !== formData.confirmPassword) {
+      setConfirmation("Passwords do not match.");
+      return; 
+    }
+
     const isUserAlreadySignedUp = await checkUserExists();
 
     if (isUserAlreadySignedUp) {
       setConfirmation('User with this email or username already exists.');
+      return;
     } else {
       try {
         // Call the signup API
@@ -39,9 +45,11 @@ const SignUp = () => {
           setConfirmation('Registration successful! You can now sign in.');
         } else {
           console.error('Error registering user:', await response.json());
+          setConfirmation('Error registering user.');
         }
       } catch (error) {
         console.error('Error registering user:', error);
+        setConfirmation('Error registering user. Please try again later.');
       }
     }
   };
@@ -152,8 +160,6 @@ const SignUp = () => {
         </label>
         <br />
         <button type="submit">SIGN UP</button>
-        <br />
-        <button>Already have an account?: SIGN IN</button>
       </form>
     </div>
   );

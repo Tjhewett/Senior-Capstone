@@ -11,6 +11,8 @@ function Home() {
       <header className="home-header">
         <img src={logo} className="home-logo" alt="logo" />
       </header>
+      <br />
+      <h3>Created By - Trevor Hewett</h3>
     </div>
   );
 }

@@ -16,7 +16,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .home-logo {
-    animation: home-logo-spin infinite 8s ease;
+    animation: home-logo-spin infinite 8s;
   }
 }
 

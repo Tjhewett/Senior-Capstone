@@ -3,7 +3,7 @@ div {
   background-color: #282c34;
 }
 
-h2 {
+h2, h4 {
   color: white;
   display: flex;
   align-items: center;

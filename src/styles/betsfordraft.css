@@ -1,30 +1,37 @@
 .container {
     max-width: 800px;
     margin: auto;
+    padding-bottom: 20px;
+}
+div{
+    color: white;
 }
   
 h2 {
     color:white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .table1 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-th, td {
-    border: 1px solid #dee2e6;
-    padding: 12px;
+.currency{
+    text-align: center;
+}
+
+.btn-primary{
+    width: 100px;
+}
+
+td {
+    padding: 5px;
     text-align: center;
     color: #ffffff;
-}
-
-td{
-    background-color: #4464AD;
-    color: black;
+    background: #333; 
 }
 
 tbody tr:hover {
