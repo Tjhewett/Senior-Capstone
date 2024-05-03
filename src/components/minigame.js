@@ -76,7 +76,7 @@ const MiniGame = () => {
     const lastRenderTime = useRef(Date.now());
     const updateGame = (ctx) => {
         const currentTime = Date.now();
-        const deltaTime = (currentTime - lastRenderTime.current) / 1000; // seconds
+        const deltaTime = (currentTime - lastRenderTime.current) / 1000; 
         lastRenderTime.current = currentTime;
     
         clearCanvas(ctx);
@@ -178,6 +178,7 @@ const MiniGame = () => {
     return (
         <div className="mini-game-container">
             <h1>Top-Down Mini Game</h1>
+            <h4>A&D keys OR Left&Right arrows to move</h4>
             <button onClick={startGame}>Start Game</button>
             {gameActive && <button onClick={endGame}>End Game</button>}
             <canvas ref={canvasRef} width={1200} height={600} />

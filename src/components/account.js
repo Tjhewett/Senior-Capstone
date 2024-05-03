@@ -61,7 +61,7 @@ const AccountPage = () => {
               </tr>
               <tr>
                 <td className="label-column">Currency</td>
-                <td className="value-column">${userData.currency}</td>
+                <td className="value-column">${userData.currency.toFixed(2)}</td>
               </tr>
             </tbody>
           </Table>

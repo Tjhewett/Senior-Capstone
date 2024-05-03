@@ -25,21 +25,21 @@ nav {
 }
 
 nav button {
-    background-color: #007BFF; /* Bootstrap primary blue */
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners for buttons */
+    border-radius: 5px; 
     font-size: 16px;
 }
 
 nav button:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
+    background-color: #0056b3; 
 }
 
-/* Pagination Styles */
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@ nav button:hover {
     padding: 8px 16px;
     margin-left: 10px;
     cursor: pointer;
-    border-radius: 5px; /* Consistency in button styles */
+    border-radius: 5px; 
 }
 
 .pagination button[disabled] {
@@ -69,12 +69,12 @@ nav button:hover {
     padding: 8px 16px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     table {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
     nav button, .pagination button {
-        padding: 8px 12px; /* Smaller padding on smaller screens */
+        padding: 8px 12px; 
     }
 }

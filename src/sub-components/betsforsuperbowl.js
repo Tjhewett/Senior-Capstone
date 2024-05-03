@@ -79,7 +79,7 @@ const Betsforsuperbowl = () => {
   
     return (
         <div className="superbowl-bets-container">
-          <h2>Super Bowl Odds</h2>
+          <h2>2025 Super Bowl Odds</h2>
           <div>Your Currency: ${userCurrency}</div>
           {superbowlOdds.map((odd) => (
             <div key={odd.Team} className="bet-item">

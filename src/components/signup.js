@@ -31,7 +31,6 @@ const SignUp = () => {
       return;
     } else {
       try {
-        // Call the signup API
         const response = await fetch('http://127.0.0.1:5000/api/signup', {
           method: 'POST',
           headers: {
@@ -70,7 +69,7 @@ const SignUp = () => {
 
       if (response.ok) {
         const data = await response.json();
-        return data.exists; // assumes there is data sent 
+        return data.exists; 
       } else {
         console.error('Error checking user:', response.statusText);
         return false;

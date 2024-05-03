@@ -47,7 +47,7 @@ const LogoutButton = ({ onLogout }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    onLogout(); // Call the logout function passed as prop
+    onLogout(); 
     navigate('/'); // Navigate after logout
   };
 
